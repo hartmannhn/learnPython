@@ -9,13 +9,13 @@ filename = ''
 while(True):
     #==============Nama lokasi yang mau discan====
     print('sample format : D:/Download/')
-    print('choose target directory to scan: ')
+    print('choose target directory to scan: ',end='')
     baseDir = input()
     #=============================================
 
     #==============Nama file disimpan=============
     print('sample format : yourFileName')
-    print('choose output file name: ')
+    print('choose output file name: ',end='')
     filename = input()
     filename = filename + '.txt'
     #=============================================
@@ -24,7 +24,7 @@ while(True):
     print('Confirmation:')
     print('Target directory: %s' %baseDir)
     print('Output filename: %s' %filename)
-    print('Input "y" to continue, "n" to reinput:')
+    print('Input "y" to continue, "n" to reinput: ',end='')
     konfirm = input()
     if konfirm == 'y':
         break
