@@ -37,6 +37,9 @@ year = list(range(int(startDate[:4]),(int(endDate[:4]))))
 def totalReturn(price):
     return (price[-1]/price[0])-1
 
+def compoundReturn(price,period):
+    return (price[-1]/price[0])**(1/(len(period)))-1
+
 def byYear(year,price):
     priceByYear = {}
     for item in year:
@@ -55,6 +58,7 @@ for item in year:
     annualPriceVolatility[item] = (dailyPriceVolatility[item])*(math.sqrt(len(tickerDailyChangePerYear[item])))
     annualReturnPerYear[item] = totalReturn(closePricePerYear[item])
 tickerTotalReturn = totalReturn(closePrice)
+tickerCompoundRate = compoundReturn(closePrice,year)
 
 #========function to display basic pull data================    
 def showInfo(price):
@@ -63,9 +67,11 @@ def showInfo(price):
     global annualPriceVolatility
     global annualReturnPerYear
     global tickerTotalReturn
+    global tickerCompoundRate
     print('total of stock price data record found: %s' %len(price))
-    print('total return: %.2f%% \n' %(tickerTotalReturn*100))
-    print('per year basis:')
+    print('total return: %.2f%% in %d years' %(tickerTotalReturn*100, len(year)))
+    print('compound return rate: %.2f%% p.a' %(tickerCompoundRate*100))    
+    print('\nper year basis:')
     print('year\trecord\treturn\tdaily volat\tannual volatility')
     for item in year:
         print('%d\t%d\t%.2f%%\t%.2f%%\t\t%.2f%%' %(item, len(closePricePerYear[item]), annualReturnPerYear[item]*100, dailyPriceVolatility[item]*100, annualPriceVolatility[item]*100))
