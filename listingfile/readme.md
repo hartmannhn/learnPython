@@ -4,9 +4,18 @@ by @hartmannhn
 - made with Python 3.7.4 (x64)
 - learning recursive function, scandir, requesting input from user, output into txt file
 
+input required
+- target directory
+- output filename
+
+output
+filename.txt file in py directory
+
 future-update-plan
 - add timer to display elapsed time
 - add progressbar (if possible, since total workload is unknown due to recursive method)
+- add GUI using TkInter
+- add output directory
 
 v1.0
 - now use recursive function without array list to facilitate unlimited directory depth and any number of files or folders
