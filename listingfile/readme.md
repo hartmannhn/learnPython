@@ -9,7 +9,7 @@ input required
 - output filename
 
 output
-filename.txt file in py directory
+- filename.txt file in py directory
 
 future-update-plan
 - add timer to display elapsed time
