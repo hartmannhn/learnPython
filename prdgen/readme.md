@@ -18,7 +18,7 @@ the actual chance value is estimated from number of procs / number of instances 
 input required
 - none
 
-output
+output  
 line graph displaying base proc chance to actual proc chance based on pseudo-random distribution
 
 future-update-plan  
