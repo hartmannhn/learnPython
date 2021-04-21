@@ -1,8 +1,18 @@
 stockIDN.py  
 by @hartmannhn
-- used to pull stock price data from specified date range and perform simple calculations
+- used to pull Indonesia's listed company stock price data from specified date range and perform simple calculations
 - made with Python 3.7.4 (x64)
 - learning using dataframe with pandas, and pandas_datareader to pull data from internet
+
+input required
+- stock ticker code (e.g. "BBCA" / "BBRI" )
+
+output
+- total return from start date to end date (in %)
+- compounded return (in %)
+- annual return (per year in %)
+- daily price volatility (in %)
+- annual price volatility (in %)
 
 future-update-plan  
 - adding IHSG and LQ45 to enable direct comparison
