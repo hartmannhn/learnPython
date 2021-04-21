@@ -15,8 +15,14 @@ by performing 10.000 instances check for each base proc chance, increasing chanc
 each proc reset chance back into base proc chance and starts again until number of instances check runs out.  
 the actual chance value is estimated from number of procs / number of instances check.
 
+input required
+- none
+
+output
+line graph displaying base proc chance to actual proc chance based on pseudo-random distribution
+
 future-update-plan  
-- none for now
+- add prompt to save result graph into .jpg
 
 v1.0  (2019/08/22)
 - now has progressbar which display how long until process finished
